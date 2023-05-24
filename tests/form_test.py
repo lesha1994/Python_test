@@ -8,6 +8,8 @@ class TestFormPage:
         first_name, last_name, email = form_page.fill_fields_and_submit()
         result = form_page.form_result()
         print(first_name, last_name, email)
-        print(result)
+        assert f'{first_name}{last_name}' == result[0], 'the form has mot been filled'
+        assert email == result[1], 'the form has mot been filled'
+
 
 

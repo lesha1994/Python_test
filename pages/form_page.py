@@ -8,9 +8,8 @@ from locators.form_page_locators import FormPageLocators as Locators
 class FormPage(BasePage):
 
     def fill_fields_and_submit(self):
-        first_name = 'Oleksii'
-        last_name = 'Pliukhin'
-        email = 'test@gmail.com'
+        person = generated_person()
+        path = generated_file()
         self.element_is_visible(Locators.FIRST_NAME).send_keys(first_name)
         self.element_is_visible(Locators.LAST_NAME).send_keys(last_name)
         self.element_is_visible(Locators.EMAIL).send_keys(email)
